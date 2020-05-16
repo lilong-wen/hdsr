@@ -26,7 +26,7 @@ class TextRecognition():
         batch_images[0, 0:self.model_data['line_width_padded'], :, 0] = image_array
         if self.model_container.model is not None:
             result = self.model_container.predict(batch_images)
-            
+
             return result[0]
             #return result
         else:
@@ -56,4 +56,5 @@ def test_continue():
         label = item.split('-')[0]
         if result == label:
             count = count + 1
+    print(count)
     return count 
