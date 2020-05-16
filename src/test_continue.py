@@ -39,10 +39,11 @@ def find_new_file(dir):
     return file
 
 
-def test_continue()
+def test_continue():
 
     test_root = './test_img/'
     model_root = './src/assets/models/'
+    count = 0
     for item in os.listdir(test_root):
         img = test_root + item
         image_array = cv2.imread(img)
@@ -50,9 +51,8 @@ def test_continue()
         a = TextRecognition(model_name=model_name_newerest)
         print("using model" + model_name_newerest + "for test")
         result = a.recognize_text(image_array)
-        print(result)
-        print(type(result))
-        label = item.split('-')[0]
-        if result != label and result != label:
-            print(label + " : " + str(result))
 
+        label = item.split('-')[0]
+        if result == label:
+            count = count + 1
+    return count 

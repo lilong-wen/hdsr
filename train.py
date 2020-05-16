@@ -7,6 +7,7 @@ from src.data_generator import DataGenerator
 from src.visualization_callback import VisualizationCallback
 from src.no_train_callback import NOTRAINCallback
 from src.config import get_path_to_model_dir_in_assets
+from src.test_continue import test_continue
 
 ex_images = Experiment()
 
@@ -76,10 +77,17 @@ def run(training_samples, batch_size, epochs, memory_units, pool_size, charset, 
     classifier.train(generator, epochs, callbacks=[generator, visualization_callback], visualize=True)
 
 
+
 if __name__ == '__main__':
     head, tail = os.path.split(os.path.join(os.path.abspath(__file__)))
     PACKAGE_DIR = os.path.join(head, '..{}..{}'.format(os.sep, os.sep))
 
+
     sys.path.insert(0, PACKAGE_DIR)
 
-    ex_images.run_commandline()
+    while True:
+        if test_continue > 42:
+            break
+        else:
+            ex_images.run_commandline()
+
