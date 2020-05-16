@@ -86,7 +86,7 @@ if __name__ == '__main__':
     sys.path.insert(0, PACKAGE_DIR)
 
     while True:
-        if test_continue > 42:
+        if test_continue() > 42:
             break
         else:
             ex_images.run_commandline()
