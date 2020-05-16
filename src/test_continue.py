@@ -33,7 +33,7 @@ class TextRecognition():
 
 def find_new_file(dir):
     file_lists = os.listdir(dir)
-    file_lists.sort(key=lambda fn: os.path.getmtime(dir + "\\" + fn)
+    file_lists.sort(key=lambda fn: os.path.getmtime(dir + fn)
                     if not os.path.isdir(dir + fn) else 0)
     file = os.path.join(dir, file_lists[-1])
     return file
