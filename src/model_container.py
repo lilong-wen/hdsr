@@ -27,7 +27,7 @@ class ModelContainer:
     def predict(self, batch_images):
         prediction = self._model.predict(batch_images)
         decoded_words = self._decode_batch(prediction)
-        print(decoded_words)
+        return decoded_words
 
     def _decode_batch(self, batch_prediction_output):
         decoded_batch = []
