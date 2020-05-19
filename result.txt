@@ -1,0 +1,12 @@
+using ./src/assets/models/rnn_prediction_2020_05_18_22_17_38.h5 32
+using ./src/assets/models/rnn_prediction_2020_05_18_23_04_25.h5 32
+using ./src/assets/models/rnn_prediction_2020_05_18_23_29_39.h5 32
+using ./src/assets/models/rnn_prediction_2020_05_19_00_05_15.h5 33
+using ./src/assets/models/rnn_prediction_2020_05_19_00_52_17.h5 33
+using ./src/assets/models/rnn_prediction_2020_05_19_01_50_34.h5 33
+using ./src/assets/models/rnn_prediction_2020_05_19_03_02_20.h5 33
+using ./src/assets/models/rnn_prediction_2020_05_19_04_26_52.h5 33
+using ./src/assets/models/rnn_prediction_2020_05_19_06_04_03.h5 33
+using ./src/assets/models/rnn_prediction_2020_05_19_07_53_47.h5 33
+using ./src/assets/models/rnn_prediction_2020_05_19_07_53_47.h5 33
+using ./src/assets/models/rnn_prediction_2020_05_19_15_08_10.h5 13
