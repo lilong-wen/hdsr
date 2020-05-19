@@ -1,2 +1,3 @@
-./src/assets/cvl_dataset/*
-./src/assets/models/*
+src/assets/cvl_dataset/
+src/assets/models/
+*.pyc
