@@ -48,11 +48,14 @@ def test_continue():
     count_item = 1
     for item in os.listdir(test_root):
         img = test_root + item
+        #image_array = cv2.imread(img)
+
         image_array = cv2.imread(img, 0)
         blur = cv2.GaussianBlur(image_array,(5,5),0)
         ret3,th3 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
         image_array = cv2.copyMakeBorder(th3, 20, 3, 20, 5, cv2.BORDER_CONSTANT, value=[255,255,255])
         image_array = cv2.cvtColor(image_array, cv2.COLOR_GRAY2RGB)
+
         model_name_newerest = find_new_file(model_root)
         a = TextRecognition(model_name=model_name_newerest)
         print("using model" + model_name_newerest + " for test: " + str(count_item))
@@ -65,4 +68,4 @@ def test_continue():
     print(count)
     with open("./result.txt", "a") as f:
         f.write("using " + str(model_name_newerest) + " " + str(count) + "\n")
-    return count 
+    return count
